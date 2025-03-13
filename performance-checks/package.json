@@ -1,0 +1,9 @@
+{
+  "name": "jira-performance-checks",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "@forge/api": "^3.9.0"
+  }
+}

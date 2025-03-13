@@ -1,0 +1,187 @@
+modules:
+  ####################
+  #   Jira modules   #
+  ####################
+  jira:adminPage: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-admin-page/
+    - key: jira-adminPage
+      resource: ui
+      title: jira:adminPage
+      resolver: 
+        function: resolver
+    - key: jira-adminPage-useAsConfig
+      resource: ui
+      title: "jira:adminPage useAsConfig: true"
+      resolver: 
+        function: resolver
+      useAsConfig: true
+    - key: jira-adminPage-useAsGetStarted
+      resource: ui
+      title: "jira:adminPage useAsGetStarted: true"
+      resolver: 
+        function: resolver
+      useAsGetStarted: true
+  jira:customField: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-custom-field/
+    - key: jira-customField
+      name: jira:customField name
+      description: jira:customField description
+      type: number
+  jira:customFieldType: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-custom-field-type/
+  - key: jira-customFieldType
+    name: jira:customFieldType name
+    description: jira:customFieldType description
+    type: number
+  jira:dashboardGadget: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-dashboard-gadget/
+    - key: jira-dashboardGadget
+      title: jira:dashboardGadget title
+      description: jira:dashboardGadget description
+      thumbnail: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+      resource: ui
+      resolver:
+        function: resolver
+      edit:
+        resource: ui
+  jira:globalPage: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-global-page/
+    - key: jira-globalPage
+      resource: ui
+      resolver:
+        function: resolver
+      title: jira:globalPage title
+  jira:issueAction: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-issue-action/
+    - key: jira-issueAction
+      resource: ui
+      resolver:
+        function: resolver
+      title: jira:issueAction title
+  jira:issueActivity: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-issue-activity/
+    - key: jira-issueActivity
+      resource: ui
+      resolver:
+        function: resolver
+      title: jira:issueActivity title
+  jira:issueContext: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-issue-context/
+    - key: jira-issueContext
+      resource: ui
+      resolver:
+        function: resolver
+      title: jira:issueContext title
+      description: jira:issueContext description
+      label: jira:issueContext label
+  jira:issuePanel: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-issue-panel/
+    - key: jira-issuePanel
+      resource: ui
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: jira:issuePanel title
+      icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
+  jira:projectPage: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-project-page/
+    - key: jira-projectPage
+      resource: ui
+      resolver:
+        function: resolver
+      title: jira:projectPage title
+  jira:projectSettingsPage: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-project-settings-page/
+    - key: jira-projectSettingsPage
+      resource: ui
+      resolver:
+        function: resolver
+      title: jira:projectSettingsPage title
+  jira:workflowValidator: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-workflow-validator/
+    - key: jira-workflowValidator
+      name: jira:workflowValidator name
+      description: jira:workflowValidator description
+      expression: "true"
+  jira:workflowCondition: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-workflow-condition/
+    - key: jira-workflowCondition
+      name: jira:workflowCondition name
+      description: jira:workflowCondition description
+      expression: "true"
+  jira:workflowPostFunction: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-workflow-post-function/
+    - key: jira-workflowPostFunction
+      name: jira:workflowPostFunction name
+      description: jira:workflowPostFunction description
+      function: postfunction
+      edit:
+        resource: ui
+      create:
+        resource: ui
+      view:
+        resource: ui
+  ##########################
+  #   Confluence modules   #
+  ##########################
+  confluence:globalSettings: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/confluence-global-page/
+    - key: confluence-globalSettings
+      resource: ui
+      resolver:
+        function: resolver
+      title: confluence:globalSettings
+    - key: confluence-globalSettings-useAsConfig
+      resource: ui
+      resolver:
+        function: resolver
+      title: "confluence:globalSettings useAsConfig: true"
+      useAsConfig: true
+    - key: confluence-globalSettings-useAsGetStarted
+      resource: ui
+      resolver:
+        function: resolver
+      title: "confluence:globalSettings useAsGetStarted: true"
+      useAsGetStarted: true
+  confluence:contentAction: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/confluence-content-action/
+    - key: confluence-contentAction
+      resource: ui
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: confluence:contentAction
+  confluence:spacePage: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/confluence-space-page/
+    - key: confluence-spacePage
+      resource: ui
+      resolver:
+        function: resolver
+      title: confluence:spacePage
+      route: confluence-spacePage
+  confluence:spaceSettings: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/confluence-space-settings/
+    - key: confluence-spaceSettings
+      resource: ui
+      resolver:
+        function: resolver
+      title: confluence:spaceSettings
+      route: confluence-spaceSettings
+  confluence:contentBylineItem: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/confluence-content-byline-item/
+    - key: confluence-contentBylineItem
+      resource: ui
+      resolver:
+        function: resolver
+      viewportSize: large
+      title: confluence:contentBylineItem
+  macro: # https://developer.atlassian.com/platform/forge/manifest-reference/modules/macro/
+    - key: macro
+      resource: ui
+      resolver:
+        function: resolver
+      title: macro
+      description: macro description
+      config:
+        function: macro-config
+  #################
+  #   functions   #
+  #################
+  function:
+    - key: resolver # https://developer.atlassian.com/platform/forge/runtime-reference/forge-resolver/
+      handler: index.handler
+    - key: postfunction
+      handler: index.postfunction
+    - key: macro-config
+      handler: index.config
+resources:
+  - key: ui
+    path: static/ui/build
+permissions:
+  scopes:
+    - read:jira-work
+app:
+  runtime:
+    name: nodejs22.x
+  id: ari:cloud:ecosystem::app/929aacb7-8557-4706-a3c0-385ce9d54184

@@ -1,0 +1,17 @@
+{
+  "name": "@app/forge-jira",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "private": true,
+  "scripts": {
+    "dev:jira": "forge tunnel",
+    "deploy": "forge deploy",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
+  },
+  "dependencies": {
+    "@forge/api": "^4.1.2",
+    "@forge/events": "^0.9.6",
+    "@forge/resolver": "1.6.3"
+  }
+}

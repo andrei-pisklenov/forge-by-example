@@ -1,0 +1,17 @@
+modules:
+  webtrigger:
+    - key: jira-webtrigger-example-webtrigger-async
+      function: async
+  function:
+    - key: async
+      handler: index.runAsync
+permissions:
+  scopes:
+    - read:jira-user
+    - read:jira-work
+    - write:jira-work
+    - storage:app
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/cfba527f-f078-4840-8aaf-e1fb316408b2
