@@ -1,0 +1,31 @@
+{
+  "name": "@app/root",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "packageManager": "yarn@4.6.0",
+  "scripts": {
+    "dev": "yarn workspaces foreach -A -p -v -i run dev",
+    "deploy": "yarn workspace @app/forge-jira deploy",
+    "lint": "yarn workspaces foreach -A -p -v -i run lint",
+    "lint:fix": "yarn workspaces foreach -A -p -v -i run lint:fix",
+    "knip": "knip"
+  },
+  "pre-commit": [
+    "lint:fix"
+  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@stylistic/eslint-plugin": "^3.0.0",
+    "eslint": "^9.19.0",
+    "knip": "^5.43.3",
+    "pre-commit": "^1.2.2",
+    "typescript-eslint": "^8.21.0"
+  }
+}
